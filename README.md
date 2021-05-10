@@ -10,10 +10,10 @@ RUN npm install
 RUN ng serve --watch
 Open your browser on http://localhost:4200/
 
-# Login Credeentials:
+# Login Credentials:
 
-userName: admin
-password: password
+1. userName: admin
+2. password: password
 
 # Functional Requirements Covered
 1. Login page
