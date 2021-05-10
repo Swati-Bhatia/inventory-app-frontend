@@ -1,0 +1,45 @@
+<div class="wrapper wrapper-content">
+    <div class="row" style="background-color: beige; margin: 10px;">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-info btn-lg" style="margin: 15px; float: right;" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add-product" style="margin-bottom: 15px;">+Add Product</button>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-sm row-border hover">
+                    <thead>
+                        <tr>
+
+                            <!-- <th><input type='checkbox'></th> -->
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Stock Number</th>
+                            <th>Purchased Date</th>
+                            <th>View</th>
+                            <th>Remove Product</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of productList let i = index;">
+
+                            <!-- <td><input type='checkbox'></td> -->
+                            <td><a class="cursor-pointer" (click)="viewProductDetails(product.product_id)">{{product?.product_id}}</a></td>
+                            <td><a class="cursor-pointer" (click)="viewProductDetails(product.product_id)"> {{product?.product_name}}</a>
+
+                            </td>
+                            <td>{{product.category}}</td>
+                            <td>{{product.stock_count}}</td>
+                            <td>{{product.purchased_date}}</td>
+                            <td><a class="cursor-pointer" (click)="viewProductDetails(product.product_id)">View</a></td>
+                            <td><a class="cursor-pointer" (click)="updateProduct(product.product_id, product.product_name)">Remove</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <app-add-product-modal></app-add-product-modal>
+</div>
