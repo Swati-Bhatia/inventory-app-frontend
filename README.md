@@ -1,5 +1,7 @@
 # inventory-app-backend
-Detailed steps on how to build and run:
+Basic application for inventory management
+
+# Detailed steps on how to build and run:
 
 # Step 1: Install the dependencies
 RUN npm install
